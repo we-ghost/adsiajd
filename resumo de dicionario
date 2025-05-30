@@ -1,0 +1,76 @@
+em Python, um dicionário (dict) é uma estrutura de dados que armazena pares chave-valor. Cada chave é única e associada a um valor específico, permitindo acesso rápido aos valores através das suas chaves. São frequentemente usados para representar dados que precisam ser associados por meio de chaves, como em uma tabela de banco de dados ou em um mapa de objetos.
+Conceitos principais:
+Chave (Key):
+É um valor único usado para identificar um elemento no dicionário. Pode ser de diversos tipos imutáveis, como strings, números ou tuplas. 
+Valor (Value):
+É o dado associado à chave. Pode ser de qualquer tipo, incluindo strings, números, listas, outros dicionários, etc.
+Pares Chave-Valor:
+Cada elemento de um dicionário é um par chave-valor.
+Mutable:
+Dicionários em Python são mutáveis, o que significa que podem ser alterados após a criação.
+Não Ordenados (em Python 3.6 e anteriores):
+A ordem dos pares chave-valor em um dicionário não é garantida. A partir da versão 3.7 do Python, a ordem é preservada na ordem de inserção. 
+Como criar um dicionário:
+Python
+
+# Dicionário vazio
+dicionario = {}
+
+# Dicionário com pares chave-valor
+dicionario = {"chave1": "valor1", "chave2": "valor2", "chave3": 123}
+
+# Dicionário usando a função dict()
+dicionario = dict([("chave1", "valor1"), ("chave2", "valor2")])
+Acessando elementos:
+Python
+
+# Acessando o valor associado à chave "chave1"
+valor = dicionario["chave1"]
+
+# Usando o método get() para acessar um valor (retorna None se a chave não existir)
+valor = dicionario.get("chave3")
+
+# Obtendo todas as chaves
+chaves = list(dicionario.keys())
+
+# Obtendo todos os valores
+valores = list(dicionario.values())
+
+# Obtendo todos os pares chave-valor (como tuplas)
+pares = list(dicionario.items())
+Modificando o dicionário:
+Python
+
+# Adicionando um novo par chave-valor
+dicionario["chave4"] = "valor4"
+
+# Removendo um par chave-valor
+del dicionario["chave1"]
+
+# Alterando o valor de uma chave existente
+dicionario["chave2"] = "novo valor"
+Operações comuns:
+len(dicionario): Retorna o número de pares chave-valor no dicionário.
+in: Verifica se uma chave está no dicionário.
+for chave in dicionario:: Itera sobre as chaves do dicionário.
+for valor in dicionario.values():: Itera sobre os valores do dicionário.
+for chave, valor in dicionario.items():: Itera sobre os pares chave-valor do dicionário.
+Exemplos práticos:
+Armazenar informações de um aluno.
+Python
+
+aluno = {"nome": "João", "idade": 20, "matricula": "123456"}
+Armazenar a frequência de palavras em um texto:
+Python
+
+texto = "esta frase contém algumas palavras e algumas palavras repetias"
+palavras = texto.split()
+frequencia = {}
+for palavra in palavras:
+    if palavra in frequencia:
+        frequencia[palavra] += 1
+    else:
+        frequencia[palavra] = 1
+Diferença entre dicionário e lista:
+Dicionário: Acessa elementos por chaves (únicas).
+Lista: Acessa elementos por índices (posições).
