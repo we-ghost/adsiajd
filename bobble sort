@@ -21,3 +21,7 @@ times = [
 numeros = [5,8,7,9,2,10,4,3,6,1]
 
 print(f'lista desordenada: {times}\n')
+
+bubble_sort(times)
+
+print(f'lista ordenada: {times}')
