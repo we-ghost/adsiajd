@@ -1,0 +1,7 @@
+dicionario = {}
+
+coxa = {'nome':'coxa',
+        'pontos':10,'vitorias':0}
+print(f'Nome: {coxa["nome"]}')
+print(f'Pontos obtidos ne rodada: {coxa["pontos"]}')
+print(f'Vitórias na rodada: {coxa["vitorias"]}')
